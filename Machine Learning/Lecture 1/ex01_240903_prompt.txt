@@ -1,0 +1,11 @@
+Implement polynomial curve fitting for the data provided in 'ex01_data.npy' using the mean squared error (MSE) loss function. Additionally, experimentally investigate the impact of polynomial degree, regularization, and the number of data points on the performance and behaviour of the fitted polynomials.
+
+1. Experiment with different polynomial degrees. Randomly select 10 data points from the data set using 'np.random.seed(100)'. Fit polynomial curves of degrees 0, 1, 2, 3, 4, and 9. Plot the resulting curves and report the corresponding errors. Using 'x1' as the independent variable (x) and 'x2' as the dependent variable (y). 
+
+2. Explore L2 regularization for a polynomial of degree 9 by choosing regularization parameters of 0.01, 0.001, and 0.0001. Plot the curves and report the errors.
+
+3. Investigate the effect of sample size. Now randomly select 100 data points from the data set using 'np.random.seed(100)'. Fit a polynomial of degree 9. Plot the curve and report the error.
+
+For each experiment, provide a very brief discussion on the results. 
+
+Optional: Note that the ground truth data, denoted {(x1,y)} as in the dataset, is also provided for comparison with the estimated ones. 
