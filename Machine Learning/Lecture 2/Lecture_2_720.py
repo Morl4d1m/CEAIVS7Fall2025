@@ -9,6 +9,7 @@
 
 import numpy as np
 import os
+import matplotlib.pyplot as plt
 
 folder = r"C:\Users\Christian Lykke\Documents\Skole\Aalborg Universitet\CEAIVS7\Machine Learning\Lecture 2\Fdataset1_G_noisy_ASCII"
 os.chdir(folder)
@@ -44,6 +45,21 @@ test_xy_126_label = np.loadtxt("tst_xy_126_class.txt")
 # Furthermore, x has label 1 and y has label 2.
 
 # Let's visualize the training data by plotting a 2D scatter plot and corresponding Gaussians for class x and class y
+colors = ['tab:blue', 'tab:orange']
+
+fig, ax = plt.subplots()
+ax.scatter(train_x[:,0], train_x[:,1], 
+            c=colors[0], label='x',
+            alpha=0.3, edgecolors='none')
+
+ax.scatter(train_y[:,0], train_y[:,1], 
+            c=colors[1], label='Y',
+            alpha=0.3, edgecolors='none')
+
+ax.legend()
+ax.grid(True)
+
+plt.show()
 
 # In[ ]:
 # Hint: look at: https://matplotlib.org/stable/gallery/statistics/confidence_ellipse.html 
@@ -56,12 +72,12 @@ test_xy_126_label = np.loadtxt("tst_xy_126_class.txt")
 # In[2]:
 # x statistics
 train_x_mean = np.mean(train_x, axis= 0)
-train_x_cov = np.cov(train_x.T)
+train_x_cov  = np.cov(train_x.T) 
 print("X stats:\n Mean:", train_x_mean, "\n Covariance", train_x_cov, "\n")
 
 # y statisticsx
 train_y_mean = np.mean(train_y, axis= 0)
-train_y_cov = np.cov(train_y.T)
+train_y_cov  = np.cov(train_y.T)
 print("Y stats:\n Mean:", train_y_mean, "\n Covariance", train_y_cov, "\n")
 
 # priors - Based upon that we expect to know NOTHING about the actual data:
@@ -125,8 +141,8 @@ print(f"\n Accuracy tst_xy: {accuracy_xy*100:.2f}%")
 # In[7]:
 
 #Since the distribution is uniform, we'll use 0.5 again:
-prior_x_uniform = 0.5
-prior_y_uniform = 0.5
+prior_x_uniform = len(train_x_label)/(len(train_x_label)+len(train_y_label))
+prior_y_uniform = len(train_y_label)/(len(train_x_label)+len(train_y_label))
 
 
 # We can now compute posteriors knowing that the posterior probability is simply the prior, p(C), multiplied by the likelihood p(x, C).
@@ -136,10 +152,10 @@ prior_y_uniform = 0.5
 likelihood_x_126_uniform = likelihood(test_xy_126, train_x_mean, train_x_cov)
 likelihood_y_126_uniform = likelihood(test_xy_126, train_y_mean, train_y_cov)
 
-print("\n Likelihood of x126 using uniform", likelihood_x, "\n likelihood of y126 using uniform", likelihood_y)
+print("\n Likelihood of x126 using uniform", likelihood_x_126_uniform, "\n likelihood of y126 using uniform", likelihood_y_126_uniform)
 
 posterior_x_uniform = likelihood_x_126_uniform * prior_x_uniform
-posterior_y_uniform = likelihood_x_126_uniform * prior_y_uniform
+posterior_y_uniform = likelihood_y_126_uniform * prior_y_uniform
 print("\n Posterior of x126 using uniform", posterior_x, "\n Posterior of y126 using uniform", posterior_y)
 
 
@@ -168,7 +184,7 @@ likelihood_y_126_non_uniform = likelihood(test_xy_126, train_y_mean, train_y_cov
 print("\n Likelihood of x126 using non-uniform", likelihood_x, "\n likelihood of y126 using non-uniform", likelihood_y)
 
 posterior_x_non_uniform = likelihood_x_126_non_uniform * prior_x_non_uniform
-posterior_y_non_uniform = likelihood_x_126_non_uniform * prior_y_non_uniform
+posterior_y_non_uniform = likelihood_y_126_non_uniform * prior_y_non_uniform
 print("\n Posterior of x126 using non-uniform", posterior_x, "\n Posterior of y126 using non-uniform", posterior_y)
 
 classification_non_uniform =  np.where(posterior_x_non_uniform > posterior_y_non_uniform, 1, 2)
