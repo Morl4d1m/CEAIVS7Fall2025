@@ -1,5 +1,11 @@
 Image processing and computer vision/978-1-4471-2503-7.pdf
 Image processing and computer vision/Szeliski_CVAABook_2ndEd.pdf
-Image processing and computer vision/ij154-win.java8/
+Image processing and computer vision/ij154-win-java8/
 Project/researchPapers/
+*.tif
+*.bmp
+*.tiff
+*.mp3
+*.mp4
+*.MOV
 
