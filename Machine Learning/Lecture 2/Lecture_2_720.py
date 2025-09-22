@@ -1,3 +1,13 @@
+# ###################################
+# Group ID : 720
+# Members : Aksel Porsborg Andersen, Magnus Stensli, Takekazu Gade Nakabayashi, Paula Lopez Urquia, Christian Lykke Joergensen, Nusrat Nabi
+# Date : 05/09/2025
+# Lecture: Lecture 1 Introduction to Machine Learning 
+# Dependencies: numpy, matplotlib, sklearn
+# Python version: 3.13.7
+# Functionality: 
+# ###################################
+
 # # Exercise
 # ## You are given, as the train data, trn_x and trn_y along with their class labels trn_x_class and trn_y_class. The task is to classify the following TEST data.
 # 
