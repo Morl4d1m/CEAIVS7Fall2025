@@ -133,7 +133,7 @@ print(f"Classification accuracy using LDA: {accuracy * 100:.2f}%")
 
 # %% [markdown]
 # What does the results show?
-# 98.48% for its classification accuracy using LDA. 
+# 94.48% for its classification accuracy using LDA.
 
 
 # %% [markdown]
