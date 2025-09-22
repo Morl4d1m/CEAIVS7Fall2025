@@ -1,3 +1,13 @@
+# ###################################
+# Group ID : 720
+# Members : Aksel Porsborg Andersen, Magnus Stensli, Takekazu Gade Nakabayashi, Paula Lopez Urquia, Christian Lykke Joergensen, Nusrat Nabi
+# Date : 19/09/2025
+# Lecture: Lecture 3 Dimensionality reduction, scipy
+# Dependencies: numpy, matplotlib, sklearn
+# Python version: 3.13.7
+# Functionality: 
+# ###################################
+
 # %%
 import numpy as np
 from scipy.stats import multivariate_normal as norm
@@ -10,10 +20,10 @@ from sklearn.discriminant_analysis import LinearDiscriminantAnalysis as LDA
 # %% [markdown]
 # ## Train data
 
-# %%
-train5 = np.loadtxt("Lecture 3/mnist_all/train5.txt") / 255  # /255 for normalization
-train6 = np.loadtxt("Lecture 3/mnist_all/train6.txt") / 255
-train8 = np.loadtxt("Lecture 3/mnist_all/train8.txt") / 255
+# %% Change to correct path:
+train5 = np.loadtxt("Lecture3 /mnist_all/train5.txt") / 255  # /255 for normalization
+train6 = np.loadtxt("Lecture3 /mnist_all/train6.txt") / 255
+train8 = np.loadtxt("Lecture3 /mnist_all/train8.txt") / 255
 
 # %%
 # Define targets
@@ -29,7 +39,7 @@ train_targets = np.concatenate([train5_target, train6_target, train8_target])
 # %% [markdown]
 # ## Test data
 
-# %%
+# %% Change to correct path:
 test5 = np.loadtxt("Lecture 3/mnist_all/test5.txt") / 255
 test6 = np.loadtxt("Lecture 3/mnist_all/test6.txt") / 255
 test8 = np.loadtxt("Lecture 3/mnist_all/test8.txt") / 255
@@ -123,6 +133,8 @@ print(f"Classification accuracy using LDA: {accuracy * 100:.2f}%")
 
 # %% [markdown]
 # What does the results show?
+# 98.48% for its classification accuracy using LDA. 
+
 
 # %% [markdown]
 # # (Optional Task) Comparison with PCA
