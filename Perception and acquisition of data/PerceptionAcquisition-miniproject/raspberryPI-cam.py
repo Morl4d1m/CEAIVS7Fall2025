@@ -1,5 +1,6 @@
 from picamera2 import Picamera2
 import time
+from libcamera import Transform
 from datetime import datetime
 import os
 
@@ -9,13 +10,15 @@ os.makedirs(image_folder, exist_ok=True)
 
 # Initialize the PiCam3
 picam2 = Picamera2()
-camera_config = picam2.create_preview_configuration()
+camera_config = picam2.create_still_configuration(
+    main={"size": (1920, 1080)},
+    transform=Transform(hflip=1, vflip=1))  # Our configuration
 picam2.configure(camera_config)
 picam2.start()  # Start the camera stream
 
 index = 0
 
-# Infinite loop to capture images every 30 seconds
+# While loop
 while True:
     # Generate a unique filename with timestamp
     timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
