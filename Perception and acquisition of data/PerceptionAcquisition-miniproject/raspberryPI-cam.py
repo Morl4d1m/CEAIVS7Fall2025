@@ -43,6 +43,6 @@ while True:
     print(f"Billede nr {index} taget: {filename}")
     print("15 sekunder til næste billede ...")
     time.sleep(15)
-    if index == 10:  # Max 10 billeder
+    if index == 100:  # Max 10 billeder
         print(f"{index} billeder taget, slukker..")
         break
