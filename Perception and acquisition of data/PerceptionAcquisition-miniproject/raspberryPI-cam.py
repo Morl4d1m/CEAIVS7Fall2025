@@ -8,13 +8,15 @@ import os
 image_folder = "pi-images"
 os.makedirs(image_folder, exist_ok=True)
 
-# Initialize the PiCam3
+# Initialize the PiCam3 (config pipeline)
 picam2 = Picamera2()
 camera_config = picam2.create_still_configuration(
     main={"size": (1920, 1080)},
     transform=Transform(hflip=1, vflip=1))  # Our configuration
 picam2.configure(camera_config)
 picam2.start()  # Start the camera stream
+
+picam2.set_controls({"AfMode": controls.AfModeEnum.Continuous})  # autofocus
 
 index = 0
 
@@ -27,10 +29,9 @@ while True:
     # Capture the image
     picam2.capture_file(filename)
 
-    print(f"Billede taget: {filename}")
-    print("15 sekunder til næste billede ...")
-    # Wait 30 seconds before next capture
     index += 1
+    print(f"Billede nr {index} taget: {filename}")
+    print("15 sekunder til næste billede ...")
     time.sleep(15)
     if index == 10:  # Max 10 billeder
         print(f"{index} billeder taget, slukker..")
