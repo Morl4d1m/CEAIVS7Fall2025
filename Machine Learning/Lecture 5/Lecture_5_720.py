@@ -1,6 +1,6 @@
 # ###################################
 # Group ID : 720
-# Members : Aksel Porsborg Andersen, Magnus Stensli, Takekazu Gade Nakabayashi, Paula Lopez Urquia, Christian Lykke Joergensen, Nusrat Nabi
+# Members : Aksel Porsborg Andersen, Magnus Stensli, Takekazu Gade Nakabayashi, Paula Lopez Urquia, Christian Lykke Joergensen
 # Date : 07/10/2025
 # Lecture: Lecture 5 Linear discrimination
 # Dependencies: numpy, matplotlib, sklearn, scipy
