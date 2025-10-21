@@ -1,0 +1,266 @@
+PCA  1 | small        | architecture=(64,) | Accuracy=0.3097 | time= 3.2s
+PCA  1 | medium       | architecture=(128,) | Accuracy=0.3121 | time= 2.2s
+PCA  1 | wideShallow  | architecture=(256,) | Accuracy=0.3148 | time= 4.4s
+PCA  1 | twoLayer     | architecture=(128, 64) | Accuracy=0.3117 | time= 8.7s
+PCA  1 | mnistOptimal | architecture=(784,) | Accuracy=0.3163 | time= 31.7s
+PCA  1 | deep         | architecture=(128, 64, 64, 64) | Accuracy=0.3114 | time= 13.9s
+PCA  1 | deeper       | architecture=(64, 64, 64, 64, 64, 64, 64) | Accuracy=0.3091 | time= 13.1s
+PCA  1 | twoLayerBottleNeck | architecture=(512, 256) | Accuracy=0.3141 | time= 34.7s
+PCA  1 | threeLayerBottleNeck | architecture=(512, 256, 128) | Accuracy=0.3128 | time= 35.2s
+PCA  1 | wideDeep     | architecture=(256, 128) | Accuracy=0.3110 | time= 10.0s
+PCA  1 | shallowTaper | architecture=(512, 256, 128, 64) | Accuracy=0.3154 | time= 83.1s
+PCA  1 | deepTaper    | architecture=(512, 256, 128, 64, 32, 16, 8, 4, 2) | Accuracy=0.2587 | time= 80.6s
+PCA  1 | wikiWork     | architecture=(784, 800) | Accuracy=0.3175 | time= 191.8s
+PCA 10 | small        | architecture=(64,) | Accuracy=0.9268 | time= 10.2s
+PCA 10 | medium       | architecture=(128,) | Accuracy=0.9334 | time= 13.4s
+PCA 10 | wideShallow  | architecture=(256,) | Accuracy=0.9387 | time= 25.0s
+PCA 10 | twoLayer     | architecture=(128, 64) | Accuracy=0.9383 | time= 17.1s
+PCA 10 | mnistOptimal | architecture=(784,) | Accuracy=0.9410 | time= 55.9s
+PCA 10 | deep         | architecture=(128, 64, 64, 64) | Accuracy=0.9364 | time= 32.1s
+PCA 10 | deeper       | architecture=(64, 64, 64, 64, 64, 64, 64) | Accuracy=0.9392 | time= 39.9s
+PCA 10 | twoLayerBottleNeck | architecture=(512, 256) | Accuracy=0.9453 | time= 69.4s
+PCA 10 | threeLayerBottleNeck | architecture=(512, 256, 128) | Accuracy=0.9418 | time= 116.9s
+PCA 10 | wideDeep     | architecture=(256, 128) | Accuracy=0.9420 | time= 28.7s
+PCA 10 | shallowTaper | architecture=(512, 256, 128, 64) | Accuracy=0.9407 | time= 86.5s
+PCA 10 | deepTaper    | architecture=(512, 256, 128, 64, 32, 16, 8, 4, 2) | Accuracy=0.7466 | time= 127.1s
+PCA 10 | wikiWork     | architecture=(784, 800) | Accuracy=0.9383 | time= 417.7s
+PCA 20 | small        | architecture=(64,) | Accuracy=0.9701 | time= 13.3s
+PCA 20 | medium       | architecture=(128,) | Accuracy=0.9708 | time= 6.9s
+PCA 20 | wideShallow  | architecture=(256,) | Accuracy=0.9743 | time= 16.5s
+PCA 20 | twoLayer     | architecture=(128, 64) | Accuracy=0.9741 | time= 19.1s
+PCA 20 | mnistOptimal | architecture=(784,) | Accuracy=0.9760 | time= 58.3s
+PCA 20 | deep         | architecture=(128, 64, 64, 64) | Accuracy=0.9744 | time= 21.5s
+PCA 20 | deeper       | architecture=(64, 64, 64, 64, 64, 64, 64) | Accuracy=0.9686 | time= 51.5s
+PCA 20 | twoLayerBottleNeck | architecture=(512, 256) | Accuracy=0.9778 | time= 73.5s
+PCA 20 | threeLayerBottleNeck | architecture=(512, 256, 128) | Accuracy=0.9783 | time= 75.6s
+PCA 20 | wideDeep     | architecture=(256, 128) | Accuracy=0.9788 | time= 25.4s
+PCA 20 | shallowTaper | architecture=(512, 256, 128, 64) | Accuracy=0.9754 | time= 74.2s
+PCA 20 | deepTaper    | architecture=(512, 256, 128, 64, 32, 16, 8, 4, 2) | Accuracy=0.9695 | time= 230.8s
+PCA 20 | wikiWork     | architecture=(784, 800) | Accuracy=0.9800 | time= 275.2s
+PCA 30 | small        | architecture=(64,) | Accuracy=0.9726 | time= 8.0s
+PCA 30 | medium       | architecture=(128,) | Accuracy=0.9774 | time= 15.0s
+PCA 30 | wideShallow  | architecture=(256,) | Accuracy=0.9804 | time= 19.5s
+PCA 30 | twoLayer     | architecture=(128, 64) | Accuracy=0.9769 | time= 10.8s
+PCA 30 | mnistOptimal | architecture=(784,) | Accuracy=0.9808 | time= 31.2s
+PCA 30 | deep         | architecture=(128, 64, 64, 64) | Accuracy=0.9754 | time= 33.9s
+PCA 30 | deeper       | architecture=(64, 64, 64, 64, 64, 64, 64) | Accuracy=0.9707 | time= 21.8s
+PCA 30 | twoLayerBottleNeck | architecture=(512, 256) | Accuracy=0.9824 | time= 61.7s
+PCA 30 | threeLayerBottleNeck | architecture=(512, 256, 128) | Accuracy=0.9786 | time= 66.0s
+PCA 30 | wideDeep     | architecture=(256, 128) | Accuracy=0.9798 | time= 22.8s
+PCA 30 | shallowTaper | architecture=(512, 256, 128, 64) | Accuracy=0.9823 | time= 156.2s
+PCA 30 | deepTaper    | architecture=(512, 256, 128, 64, 32, 16, 8, 4, 2) | Accuracy=0.9560 | time= 158.4s
+PCA 30 | wikiWork     | architecture=(784, 800) | Accuracy=0.9859 | time= 678.2s
+PCA 40 | small        | architecture=(64,) | Accuracy=0.9758 | time= 13.1s
+PCA 40 | medium       | architecture=(128,) | Accuracy=0.9783 | time= 9.9s
+PCA 40 | wideShallow  | architecture=(256,) | Accuracy=0.9810 | time= 16.2s
+PCA 40 | twoLayer     | architecture=(128, 64) | Accuracy=0.9790 | time= 12.8s
+PCA 40 | mnistOptimal | architecture=(784,) | Accuracy=0.9818 | time= 59.4s
+PCA 40 | deep         | architecture=(128, 64, 64, 64) | Accuracy=0.9774 | time= 23.0s
+PCA 40 | deeper       | architecture=(64, 64, 64, 64, 64, 64, 64) | Accuracy=0.9719 | time= 46.4s
+PCA 40 | twoLayerBottleNeck | architecture=(512, 256) | Accuracy=0.9828 | time= 55.7s
+PCA 40 | threeLayerBottleNeck | architecture=(512, 256, 128) | Accuracy=0.9820 | time= 114.6s
+PCA 40 | wideDeep     | architecture=(256, 128) | Accuracy=0.9818 | time= 22.2s
+PCA 40 | shallowTaper | architecture=(512, 256, 128, 64) | Accuracy=0.9842 | time= 171.5s
+PCA 40 | deepTaper    | architecture=(512, 256, 128, 64, 32, 16, 8, 4, 2) | Accuracy=0.1135 | time= 48.1s
+PCA 40 | wikiWork     | architecture=(784, 800) | Accuracy=0.9855 | time= 316.4s
+PCA 50 | small        | architecture=(64,) | Accuracy=0.9747 | time= 9.0s
+PCA 50 | medium       | architecture=(128,) | Accuracy=0.9793 | time= 11.9s
+PCA 50 | wideShallow  | architecture=(256,) | Accuracy=0.9818 | time= 22.9s
+PCA 50 | twoLayer     | architecture=(128, 64) | Accuracy=0.9791 | time= 22.2s
+PCA 50 | mnistOptimal | architecture=(784,) | Accuracy=0.9823 | time= 42.3s
+PCA 50 | deep         | architecture=(128, 64, 64, 64) | Accuracy=0.9775 | time= 17.7s
+PCA 50 | deeper       | architecture=(64, 64, 64, 64, 64, 64, 64) | Accuracy=0.9705 | time= 24.4s
+PCA 50 | twoLayerBottleNeck | architecture=(512, 256) | Accuracy=0.9805 | time= 56.1s
+PCA 50 | threeLayerBottleNeck | architecture=(512, 256, 128) | Accuracy=0.9796 | time= 73.9s
+PCA 50 | wideDeep     | architecture=(256, 128) | Accuracy=0.9795 | time= 32.8s
+PCA 50 | shallowTaper | architecture=(512, 256, 128, 64) | Accuracy=0.9841 | time= 119.9s
+PCA 50 | deepTaper    | architecture=(512, 256, 128, 64, 32, 16, 8, 4, 2) | Accuracy=0.9743 | time= 230.5s
+PCA 50 | wikiWork     | architecture=(784, 800) | Accuracy=0.9831 | time= 262.3s
+PCA 60 | small        | architecture=(64,) | Accuracy=0.9757 | time= 10.4s
+PCA 60 | medium       | architecture=(128,) | Accuracy=0.9790 | time= 13.1s
+PCA 60 | wideShallow  | architecture=(256,) | Accuracy=0.9820 | time= 20.6s
+PCA 60 | twoLayer     | architecture=(128, 64) | Accuracy=0.9774 | time= 19.3s
+PCA 60 | mnistOptimal | architecture=(784,) | Accuracy=0.9842 | time= 39.3s
+PCA 60 | deep         | architecture=(128, 64, 64, 64) | Accuracy=0.9758 | time= 14.1s
+PCA 60 | deeper       | architecture=(64, 64, 64, 64, 64, 64, 64) | Accuracy=0.9742 | time= 41.0s
+PCA 60 | twoLayerBottleNeck | architecture=(512, 256) | Accuracy=0.9813 | time= 41.9s
+PCA 60 | threeLayerBottleNeck | architecture=(512, 256, 128) | Accuracy=0.9811 | time= 110.2s
+PCA 60 | wideDeep     | architecture=(256, 128) | Accuracy=0.9794 | time= 24.4s
+PCA 60 | shallowTaper | architecture=(512, 256, 128, 64) | Accuracy=0.9825 | time= 105.9s
+PCA 60 | deepTaper    | architecture=(512, 256, 128, 64, 32, 16, 8, 4, 2) | Accuracy=0.8398 | time= 91.9s
+PCA 60 | wikiWork     | architecture=(784, 800) | Accuracy=0.9833 | time= 205.7s
+PCA 70 | small        | architecture=(64,) | Accuracy=0.9751 | time= 12.8s
+PCA 70 | medium       | architecture=(128,) | Accuracy=0.9799 | time= 19.1s
+PCA 70 | wideShallow  | architecture=(256,) | Accuracy=0.9827 | time= 25.0s
+PCA 70 | twoLayer     | architecture=(128, 64) | Accuracy=0.9761 | time= 19.0s
+PCA 70 | mnistOptimal | architecture=(784,) | Accuracy=0.9842 | time= 46.9s
+PCA 70 | deep         | architecture=(128, 64, 64, 64) | Accuracy=0.9782 | time= 47.4s
+PCA 70 | deeper       | architecture=(64, 64, 64, 64, 64, 64, 64) | Accuracy=0.9704 | time= 56.9s
+PCA 70 | twoLayerBottleNeck | architecture=(512, 256) | Accuracy=0.9839 | time= 108.4s
+PCA 70 | threeLayerBottleNeck | architecture=(512, 256, 128) | Accuracy=0.9847 | time= 123.0s
+PCA 70 | wideDeep     | architecture=(256, 128) | Accuracy=0.9827 | time= 34.6s
+PCA 70 | shallowTaper | architecture=(512, 256, 128, 64) | Accuracy=0.9815 | time= 107.5s
+PCA 70 | deepTaper    | architecture=(512, 256, 128, 64, 32, 16, 8, 4, 2) | Accuracy=0.9808 | time= 235.3s
+PCA 70 | wikiWork     | architecture=(784, 800) | Accuracy=0.9865 | time= 488.5s
+PCA 80 | small        | architecture=(64,) | Accuracy=0.9749 | time= 8.8s
+PCA 80 | medium       | architecture=(128,) | Accuracy=0.9780 | time= 16.3s
+PCA 80 | wideShallow  | architecture=(256,) | Accuracy=0.9830 | time= 17.6s
+PCA 80 | twoLayer     | architecture=(128, 64) | Accuracy=0.9785 | time= 20.9s
+PCA 80 | mnistOptimal | architecture=(784,) | Accuracy=0.9849 | time= 29.8s
+PCA 80 | deep         | architecture=(128, 64, 64, 64) | Accuracy=0.9763 | time= 36.6s
+PCA 80 | deeper       | architecture=(64, 64, 64, 64, 64, 64, 64) | Accuracy=0.9712 | time= 37.9s
+PCA 80 | twoLayerBottleNeck | architecture=(512, 256) | Accuracy=0.9834 | time= 112.5s
+PCA 80 | threeLayerBottleNeck | architecture=(512, 256, 128) | Accuracy=0.9816 | time= 80.9s
+PCA 80 | wideDeep     | architecture=(256, 128) | Accuracy=0.9824 | time= 25.6s
+PCA 80 | shallowTaper | architecture=(512, 256, 128, 64) | Accuracy=0.9826 | time= 87.0s
+PCA 80 | deepTaper    | architecture=(512, 256, 128, 64, 32, 16, 8, 4, 2) | Accuracy=0.9758 | time= 194.5s
+PCA 80 | wikiWork     | architecture=(784, 800) | Accuracy=0.9847 | time= 232.5s
+PCA 90 | small        | architecture=(64,) | Accuracy=0.9738 | time= 9.0s
+PCA 90 | medium       | architecture=(128,) | Accuracy=0.9803 | time= 18.6s
+PCA 90 | wideShallow  | architecture=(256,) | Accuracy=0.9819 | time= 33.5s
+PCA 90 | twoLayer     | architecture=(128, 64) | Accuracy=0.9782 | time= 17.4s
+PCA 90 | mnistOptimal | architecture=(784,) | Accuracy=0.9837 | time= 30.8s
+PCA 90 | deep         | architecture=(128, 64, 64, 64) | Accuracy=0.9728 | time= 16.7s
+PCA 90 | deeper       | architecture=(64, 64, 64, 64, 64, 64, 64) | Accuracy=0.9720 | time= 30.1s
+PCA 90 | twoLayerBottleNeck | architecture=(512, 256) | Accuracy=0.9850 | time= 76.0s
+PCA 90 | threeLayerBottleNeck | architecture=(512, 256, 128) | Accuracy=0.9821 | time= 102.5s
+PCA 90 | wideDeep     | architecture=(256, 128) | Accuracy=0.9815 | time= 41.7s
+PCA 90 | shallowTaper | architecture=(512, 256, 128, 64) | Accuracy=0.9802 | time= 63.8s
+PCA 90 | deepTaper    | architecture=(512, 256, 128, 64, 32, 16, 8, 4, 2) | Accuracy=0.9774 | time= 197.0s
+PCA 90 | wikiWork     | architecture=(784, 800) | Accuracy=0.9853 | time= 309.4s
+PCA 100 | small        | architecture=(64,) | Accuracy=0.9764 | time= 11.0s
+PCA 100 | medium       | architecture=(128,) | Accuracy=0.9784 | time= 19.4s
+PCA 100 | wideShallow  | architecture=(256,) | Accuracy=0.9807 | time= 18.1s
+PCA 100 | twoLayer     | architecture=(128, 64) | Accuracy=0.9806 | time= 27.0s
+PCA 100 | mnistOptimal | architecture=(784,) | Accuracy=0.9838 | time= 76.0s
+PCA 100 | deep         | architecture=(128, 64, 64, 64) | Accuracy=0.9763 | time= 30.9s
+PCA 100 | deeper       | architecture=(64, 64, 64, 64, 64, 64, 64) | Accuracy=0.9725 | time= 28.1s
+PCA 100 | twoLayerBottleNeck | architecture=(512, 256) | Accuracy=0.9839 | time= 87.5s
+PCA 100 | threeLayerBottleNeck | architecture=(512, 256, 128) | Accuracy=0.9799 | time= 50.3s
+PCA 100 | wideDeep     | architecture=(256, 128) | Accuracy=0.9793 | time= 17.0s
+PCA 100 | shallowTaper | architecture=(512, 256, 128, 64) | Accuracy=0.9822 | time= 210.6s
+PCA 100 | deepTaper    | architecture=(512, 256, 128, 64, 32, 16, 8, 4, 2) | Accuracy=0.9747 | time= 217.5s
+PCA 100 | wikiWork     | architecture=(784, 800) | Accuracy=0.9846 | time= 250.8s
+PCA 200 | small        | architecture=(64,) | Accuracy=0.9715 | time= 10.7s
+PCA 200 | medium       | architecture=(128,) | Accuracy=0.9765 | time= 15.3s
+PCA 200 | wideShallow  | architecture=(256,) | Accuracy=0.9798 | time= 29.1s
+PCA 200 | twoLayer     | architecture=(128, 64) | Accuracy=0.9741 | time= 20.2s
+PCA 200 | mnistOptimal | architecture=(784,) | Accuracy=0.9831 | time= 137.3s
+PCA 200 | deep         | architecture=(128, 64, 64, 64) | Accuracy=0.9749 | time= 34.1s
+PCA 200 | deeper       | architecture=(64, 64, 64, 64, 64, 64, 64) | Accuracy=0.9659 | time= 32.0s
+PCA 200 | twoLayerBottleNeck | architecture=(512, 256) | Accuracy=0.9826 | time= 88.0s
+PCA 200 | threeLayerBottleNeck | architecture=(512, 256, 128) | Accuracy=0.9763 | time= 51.2s
+PCA 200 | wideDeep     | architecture=(256, 128) | Accuracy=0.9796 | time= 38.6s
+PCA 200 | shallowTaper | architecture=(512, 256, 128, 64) | Accuracy=0.9803 | time= 104.9s
+PCA 200 | deepTaper    | architecture=(512, 256, 128, 64, 32, 16, 8, 4, 2) | Accuracy=0.9695 | time= 155.5s
+PCA 200 | wikiWork     | architecture=(784, 800) | Accuracy=0.9788 | time= 170.2s
+PCA 300 | small        | architecture=(64,) | Accuracy=0.9705 | time= 10.5s
+PCA 300 | medium       | architecture=(128,) | Accuracy=0.9770 | time= 31.7s
+PCA 300 | wideShallow  | architecture=(256,) | Accuracy=0.9796 | time= 49.6s
+PCA 300 | twoLayer     | architecture=(128, 64) | Accuracy=0.9745 | time= 28.6s
+PCA 300 | mnistOptimal | architecture=(784,) | Accuracy=0.9820 | time= 184.4s
+PCA 300 | deep         | architecture=(128, 64, 64, 64) | Accuracy=0.9739 | time= 28.7s
+PCA 300 | deeper       | architecture=(64, 64, 64, 64, 64, 64, 64) | Accuracy=0.9647 | time= 22.9s
+PCA 300 | twoLayerBottleNeck | architecture=(512, 256) | Accuracy=0.9810 | time= 189.2s
+PCA 300 | threeLayerBottleNeck | architecture=(512, 256, 128) | Accuracy=0.9779 | time= 67.0s
+PCA 300 | wideDeep     | architecture=(256, 128) | Accuracy=0.9785 | time= 30.2s
+PCA 300 | shallowTaper | architecture=(512, 256, 128, 64) | Accuracy=0.9784 | time= 127.1s
+PCA 300 | deepTaper    | architecture=(512, 256, 128, 64, 32, 16, 8, 4, 2) | Accuracy=0.9732 | time= 280.8s
+PCA 300 | wikiWork     | architecture=(784, 800) | Accuracy=0.9820 | time= 356.7s
+PCA 400 | small        | architecture=(64,) | Accuracy=0.9686 | time= 15.7s
+PCA 400 | medium       | architecture=(128,) | Accuracy=0.9774 | time= 42.9s
+PCA 400 | wideShallow  | architecture=(256,) | Accuracy=0.9752 | time= 19.4s
+PCA 400 | twoLayer     | architecture=(128, 64) | Accuracy=0.9742 | time= 17.9s
+PCA 400 | mnistOptimal | architecture=(784,) | Accuracy=0.9777 | time= 82.7s
+PCA 400 | deep         | architecture=(128, 64, 64, 64) | Accuracy=0.9728 | time= 63.1s
+PCA 400 | deeper       | architecture=(64, 64, 64, 64, 64, 64, 64) | Accuracy=0.9655 | time= 43.2s
+PCA 400 | twoLayerBottleNeck | architecture=(512, 256) | Accuracy=0.9792 | time= 83.2s
+PCA 400 | threeLayerBottleNeck | architecture=(512, 256, 128) | Accuracy=0.9800 | time= 273.0s
+PCA 400 | wideDeep     | architecture=(256, 128) | Accuracy=0.9755 | time= 30.8s
+PCA 400 | shallowTaper | architecture=(512, 256, 128, 64) | Accuracy=0.9798 | time= 246.1s
+PCA 400 | deepTaper    | architecture=(512, 256, 128, 64, 32, 16, 8, 4, 2) | Accuracy=0.4911 | time= 142.2s
+PCA 400 | wikiWork     | architecture=(784, 800) | Accuracy=0.9794 | time= 185.4s
+PCA 500 | small        | architecture=(64,) | Accuracy=0.9725 | time= 21.1s
+PCA 500 | medium       | architecture=(128,) | Accuracy=0.9744 | time= 23.5s
+PCA 500 | wideShallow  | architecture=(256,) | Accuracy=0.9790 | time= 82.9s
+PCA 500 | twoLayer     | architecture=(128, 64) | Accuracy=0.9749 | time= 20.3s
+PCA 500 | mnistOptimal | architecture=(784,) | Accuracy=0.9813 | time= 241.1s
+PCA 500 | deep         | architecture=(128, 64, 64, 64) | Accuracy=0.9715 | time= 23.8s
+PCA 500 | deeper       | architecture=(64, 64, 64, 64, 64, 64, 64) | Accuracy=0.9627 | time= 52.3s
+PCA 500 | twoLayerBottleNeck | architecture=(512, 256) | Accuracy=0.9785 | time= 138.4s
+PCA 500 | threeLayerBottleNeck | architecture=(512, 256, 128) | Accuracy=0.9770 | time= 178.6s
+PCA 500 | wideDeep     | architecture=(256, 128) | Accuracy=0.9765 | time= 37.7s
+PCA 500 | shallowTaper | architecture=(512, 256, 128, 64) | Accuracy=0.9782 | time= 164.4s
+PCA 500 | deepTaper    | architecture=(512, 256, 128, 64, 32, 16, 8, 4, 2) | Accuracy=0.5776 | time= 374.2s
+PCA 500 | wikiWork     | architecture=(784, 800) | Accuracy=0.9802 | time= 374.7s
+PCA 784 | small        | architecture=(64,) | Accuracy=0.9706 | time= 22.8s
+PCA 784 | medium       | architecture=(128,) | Accuracy=0.9732 | time= 35.6s
+PCA 784 | wideShallow  | architecture=(256,) | Accuracy=0.9797 | time= 156.0s
+PCA 784 | twoLayer     | architecture=(128, 64) | Accuracy=0.9722 | time= 30.0s
+PCA 784 | mnistOptimal | architecture=(784,) | Accuracy=0.9813 | time= 345.9s
+PCA 784 | deep         | architecture=(128, 64, 64, 64) | Accuracy=0.9735 | time= 85.6s
+PCA 784 | deeper       | architecture=(64, 64, 64, 64, 64, 64, 64) | Accuracy=0.9664 | time= 86.1s
+PCA 784 | twoLayerBottleNeck | architecture=(512, 256) | Accuracy=0.9791 | time= 334.1s
+PCA 784 | threeLayerBottleNeck | architecture=(512, 256, 128) | Accuracy=0.9773 | time= 216.5s
+PCA 784 | wideDeep     | architecture=(256, 128) | Accuracy=0.9752 | time= 65.4s
+PCA 784 | shallowTaper | architecture=(512, 256, 128, 64) | Accuracy=0.9743 | time= 169.0s
+PCA 784 | deepTaper    | architecture=(512, 256, 128, 64, 32, 16, 8, 4, 2) | Accuracy=0.1135 | time= 108.2s
+PCA 784 | wikiWork     | architecture=(784, 800) | Accuracy=0.9767 | time= 292.6s
+LDA | small        | architecture=(64,) | Accuracy=0.9131 | time= 8.4s
+LDA | medium       | architecture=(128,) | Accuracy=0.9152 | time= 9.1s
+LDA | wideShallow  | architecture=(256,) | Accuracy=0.9204 | time= 25.7s
+LDA | twoLayer     | architecture=(128, 64) | Accuracy=0.9227 | time= 24.5s
+LDA | mnistOptimal | architecture=(784,) | Accuracy=0.9227 | time= 44.8s
+LDA | deep         | architecture=(128, 64, 64, 64) | Accuracy=0.9233 | time= 30.4s
+LDA | deeper       | architecture=(64, 64, 64, 64, 64, 64, 64) | Accuracy=0.9223 | time= 32.1s
+LDA | twoLayerBottleNeck | architecture=(512, 256) | Accuracy=0.9200 | time= 76.9s
+LDA | threeLayerBottleNeck | architecture=(512, 256, 128) | Accuracy=0.9230 | time= 75.0s
+LDA | wideDeep     | architecture=(256, 128) | Accuracy=0.9213 | time= 22.9s
+LDA | shallowTaper | architecture=(512, 256, 128, 64) | Accuracy=0.9222 | time= 95.8s
+LDA | deepTaper    | architecture=(512, 256, 128, 64, 32, 16, 8, 4, 2) | Accuracy=0.1135 | time= 46.8s
+LDA | wikiWork     | architecture=(784, 800) | Accuracy=0.9208 | time= 272.9s
+
+
+PCA1     Best: wikiWork     architecture=(784, 800) Accuracy=0.3175 time= 191.8s
+PCA10    Best: twoLayerBottleNeck architecture=(512, 256) Accuracy=0.9453 time= 69.4s
+PCA20    Best: wikiWork     architecture=(784, 800) Accuracy=0.9800 time= 275.2s
+PCA30    Best: wikiWork     architecture=(784, 800) Accuracy=0.9859 time= 678.2s
+PCA40    Best: wikiWork     architecture=(784, 800) Accuracy=0.9855 time= 316.4s
+PCA50    Best: shallowTaper architecture=(512, 256, 128, 64) Accuracy=0.9841 time= 119.9s
+PCA60    Best: mnistOptimal architecture=(784,) Accuracy=0.9842 time= 39.3s
+PCA70    Best: wikiWork     architecture=(784, 800) Accuracy=0.9865 time= 488.5s
+PCA80    Best: mnistOptimal architecture=(784,) Accuracy=0.9849 time= 29.8s
+PCA90    Best: wikiWork     architecture=(784, 800) Accuracy=0.9853 time= 309.4s
+PCA100   Best: wikiWork     architecture=(784, 800) Accuracy=0.9846 time= 250.8s
+PCA200   Best: mnistOptimal architecture=(784,) Accuracy=0.9831 time= 137.3s
+PCA300   Best: mnistOptimal architecture=(784,) Accuracy=0.9820 time= 184.4s
+PCA400   Best: threeLayerBottleNeck architecture=(512, 256, 128) Accuracy=0.9800 time= 273.0s
+PCA500   Best: mnistOptimal architecture=(784,) Accuracy=0.9813 time= 241.1s
+PCA784   Best: mnistOptimal architecture=(784,) Accuracy=0.9813 time= 345.9s
+LDA:     Best: deep         architecture=(128, 64, 64, 64) Accuracy=0.9233 time= 30.4s
+
+
+Short conclusions:
+- PCA70    best model wikiWork     => test Accuracy: 0.9865
+- PCA30    best model wikiWork     => test Accuracy: 0.9859
+- PCA40    best model wikiWork     => test Accuracy: 0.9855
+- PCA90    best model wikiWork     => test Accuracy: 0.9853
+- PCA80    best model mnistOptimal => test Accuracy: 0.9849
+- PCA100   best model wikiWork     => test Accuracy: 0.9846
+- PCA60    best model mnistOptimal => test Accuracy: 0.9842
+- PCA50    best model shallowTaper => test Accuracy: 0.9841
+- PCA200   best model mnistOptimal => test Accuracy: 0.9831
+- PCA300   best model mnistOptimal => test Accuracy: 0.9820
+- PCA500   best model mnistOptimal => test Accuracy: 0.9813
+- PCA784   best model mnistOptimal => test Accuracy: 0.9813
+- PCA20    best model wikiWork     => test Accuracy: 0.9800
+- PCA400   best model threeLayerBottleNeck => test Accuracy: 0.9800
+- PCA10    best model twoLayerBottleNeck => test Accuracy: 0.9453
+- LDA:     best model deep         => test Accuracy: 0.9233
+- PCA1     best model wikiWork     => test Accuracy: 0.3175
+
+Notes:
+LDA uses at most 9 components (n_classes - 1). It often preserves class-separating directions beneficial for linear classifiers and may help MLPs.
+PCA retains variance; increasing PCA dims (10->50) usually improves accuracy but with diminishing returns.
+Tuning architectures, learning rate and regularization (alpha) for better accuracy.
+If training is slow, reduce hidden layer sizes, increase batch_size, or lower max_iter/enable early_stopping (already enabled here).
