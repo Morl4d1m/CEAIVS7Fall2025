@@ -13,3 +13,8 @@ Project/researchPapers/
 *.bmp
 Perception and acquisition of data/PerceptionAcquisition-miniproject/
 *.fig
+Project/SRImplementation/TSD-SR-main/imgs/
+Project/SRImplementation/TSD-SR-main/outputs/
+Project/SRImplementation/sd3/
+Project/SRImplementation/StableSR_testsets/
+Project/SRImplementation/__MACOSX/
