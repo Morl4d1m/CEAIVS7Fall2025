@@ -1,0 +1,41 @@
+import os
+from pathlib import Path
+from PIL import Image, PngImagePlugin
+import concurrent.futures
+
+# Input and output folders
+input_dir = Path(r"C:\Users\Christian Lykke\Downloads\Market-1501-v15.09.15\query\pngs")
+output_dir = input_dir / "128x128Versions"
+output_dir.mkdir(exist_ok=True)
+
+# Create output directory if it doesn’t exist
+os.makedirs(output_dir, exist_ok=True)
+
+# Loop through all images in input_dir
+for filename in os.listdir(input_dir):
+    if not filename.lower().endswith(('.png', '.jpg', '.jpeg', '.bmp', '.tiff')):
+        continue
+
+    # Open the image
+    img_path = os.path.join(input_dir, filename)
+    img = Image.open(img_path)
+
+    # Ensure input is 64x128 (width x height)
+    if img.size != (64, 128):
+        print(f"Skipping {filename}: size {img.size} != (64, 128)")
+        continue
+
+    # Create new blank image 128x128
+    new_img = Image.new("RGB", (128, 128))
+
+    # Paste original twice: left and right
+    new_img.paste(img, (0, 0))
+    new_img.paste(img, (64, 0))
+
+    # Save output
+    new_path = os.path.join(output_dir, filename)
+    new_img.save(new_path)
+
+    print(f"Saved {new_path}")
+
+print("Done! All 64x128 images duplicated side-by-side to 128x128.")
