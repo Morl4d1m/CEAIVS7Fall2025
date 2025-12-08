@@ -5,11 +5,11 @@ from pathlib import Path
 from PIL import Image, PngImagePlugin
 import concurrent.futures
 
-inputDir = Path(r"C:\Users\Christian Lykke\Documents\Skole\Aalborg Universitet\CEAIVS7\Project\SRImplementation\TSD-SR-main\imgs\segmentationTest") # Remember to change this to your personal directory
-PNGDir = inputDir / "pngs" # Folder name for PNG versions of images
-framesDir = inputDir / "frames" # Folder that holds subfolders with each 128x128 frame
-framesSRDir = inputDir / "framesSR" # Contains subfolders with each 512x512 SR'ed frame
-SRDir = inputDir / "superresolvedComplete" # Contains re-assembled superresolved images
+inputDir = Path(r"C:\Users\Christian Lykke\Documents\Skole\Aalborg Universitet\CEAIVS7\Project\SRImplementation\TSD-SR-main\imgs\segmentationTest\claaudiaTesting") # Remember to change this to your personal directory
+PNGDir = inputDir / "pngsClaaudia" # Folder name for PNG versions of images
+framesDir = inputDir / "framesClaaudia" # Folder that holds subfolders with each 128x128 frame
+framesSRDir = inputDir / "framesSRClaaudia" # Contains subfolders with each 512x512 SR'ed frame
+SRDir = inputDir / "superresolvedCompleteClaaudia" # Contains re-assembled superresolved images
 
 ############################################################
 # Function 1 - Load images from directory
@@ -34,7 +34,7 @@ def convertToPngIfNeeded(imgPath: Path, outputDir: Path):
 
     if imgPath.suffix.lower() == ".png": # Checks wether or not the current image is png or not
         print(f"[INFO] Already PNG: {imgPath.name}") # Serial update in terminal/output
-        return imgPath # Returns the original image path, as this file is already a valid PNG
+        #return imgPath # Returns the original image path, as this file is already a valid PNG
 
     try:
         with Image.open(imgPath) as im: # Uses lazy loading until a process (such as saving) actually begins
@@ -87,10 +87,16 @@ def runTsdSr(
     lora_dir="checkpoint/tsdsr",
     embedding_dir="dataset/default",
     python_exe="python",
-    device="cpu"
+    device="cpu",
+    debugSkip=True
 ): # Basically sets the variables for all of the parameters used in the TSD-SR model, so that you only need to type input and output directories into the function
     input_dir = Path(input_dir) # makes the input directory useable for the function
     output_dir = Path(output_dir) # Makes the output directory useable for the function
+
+    if debugSkip:
+        print("[DEBUG] Skipping TSD-SR execution. Using existing SR directory:", output_dir)
+        return output_dir
+
     print(f"[INFO] Running TSD-SR on folder: {input_dir}") # Terminal/output update
 
     command = [ # Acts as a terminal command, so everything from here is identical to how we'd usually call the TSD-SR model in terminal
@@ -138,14 +144,14 @@ def runReIdModel(frames): # needs implementation
 ############################################################
 # Function 7 - Reassemble SR frames into full image
 ############################################################
-def combineframes(frames, originalSize): # Uses the number of frames and original image size (before SR) as inputs to create the "new" image
+def combineframes(frames, originalSize, index): # Uses the number of frames and original image size (before SR) as inputs to create the "new" image
     W0, H0 = originalSize       # original size
     # Number of frames in each dimension (tiling uses steps of 128)
     framesX = (W0 + 127) // 128
     framesY = (H0 + 127) // 128
 
     # Determine SR frame size dynamically 
-    frameW_sr, frameH_sr = frames[0].size
+    frameW_sr, frameH_sr = frames[index].size
 
     # Full output dimensions
     outW = framesX * frameW_sr
@@ -153,7 +159,7 @@ def combineframes(frames, originalSize): # Uses the number of frames and origina
 
     out = Image.new("RGB", (outW, outH)) # Creates a new RGB image with the dimensions calculated based on frames
 
-    index = 0
+    
     for ty in range(framesY):
         for tx in range(framesX):
             if index >= len(frames):
@@ -173,7 +179,7 @@ def combineframes(frames, originalSize): # Uses the number of frames and origina
     out = out.crop((0, 0, finalW, finalH)) # Ensures no black background is present
 
     print("[INFO] Cropped final image to match original aspect (4x)") # Terminal update
-    return out
+    return out, index
 
 
 ############################################################
@@ -195,7 +201,7 @@ def printReIdMetrics(metrics):
 # Optional function - Save segmented frames to folder
 ############################################################
 def saveSegmentedFrames(frames, baseSaveDir: Path, imageName: str):
-    saveFolder = baseSaveDir / f"{imageName}_frames"
+    saveFolder = baseSaveDir #/ f"{imageName}_frames"
     saveFolder.mkdir(parents=True, exist_ok=True)
 
     for i, frame in enumerate(frames):
@@ -241,6 +247,7 @@ def processDirectory(inputDir, PNGDir, framesDir, framesSRDir, srDir):
     srDir.mkdir(exist_ok=True)
 
     images = loadImages(inputDir)
+    index=0
 
     for imgPath in images:
 
@@ -256,35 +263,24 @@ def processDirectory(inputDir, PNGDir, framesDir, framesSRDir, srDir):
 
         # Optional Step - Save segmentation for human inspection
         saveSegmentedFrames(frames, baseSaveDir=framesDir, imageName=pngPath.stem)
-        
         # Step 4 - TSD-SR
-        framesFolder = framesDir / f"{pngPath.stem}_frames"
-        tsdsrOutputFolder = framesSRDir / f"{pngPath.stem}_SR_frames"
-        tsdsrOutput = runTsdSr(input_dir=framesFolder, output_dir=tsdsrOutputFolder)
-        srFrames = loadFramesFromFolder(tsdsrOutput)
+        framesFolder = framesDir #/ f"{pngPath.stem}_frames"
+        tsdsrOutputFolder = framesSRDir #/ f"{pngPath.stem}_SR_frames"
+    
+    tsdsrOutput = runTsdSr(input_dir=framesFolder, output_dir=tsdsrOutputFolder)
+    srFrames = loadFramesFromFolder(tsdsrOutput)
 
-        # Optional Step - Save superresolved frames for inspection
-        #saveSuperresolvedFrames(srFrames, baseSaveDir=framesSRDir, imageName=pngPath.stem)
-
-        # Step 5 - SR Metrics
-        printTsdSrMetrics(metrics={"dummy": 1.0})
-
-        # Step 6 - ReID on frames
-        #reidBefore = runReIdModel(frames)
+    for imgPath in images:
+        pngPath = PNGDir / f"{imgPath.stem}.png"
+        img = Image.open(pngPath)
         
         # Step 7 - Reassemble SR frames
-        srImage = combineframes(srFrames, img.size)
+        srImage, index = combineframes(srFrames, img.size, index=index)
 
         # Save SR image
         savePath = srDir / f"{pngPath.stem}_SR.png"
         srImage.save(savePath)
         print(f"[INFO] Saved superresolved: {savePath}")
-
-        # Step 8 - ReID on full SR image
-        #reidFinal = runReIdOnSuperresolved(srImage)
-
-        # Step 9 - Print metrics
-        #printReIdMetrics(reidFinal)
         
         print("-" * 50)
 
@@ -292,8 +288,9 @@ def processDirectory(inputDir, PNGDir, framesDir, framesSRDir, srDir):
 
 def loadFramesFromFolder(folder: Path):
     frames = []
-    for f in sorted(folder.glob("*.png")):
+    for f in sorted(folder.glob("*_frame_*.png")):
         frames.append(Image.open(f))
+    print(f"[INFO] Loaded {len(frames)} SR frames")
     return frames
 
 
