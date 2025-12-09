@@ -151,7 +151,10 @@ def combineframes(frames, originalSize, index): # Uses the number of frames and 
     framesY = (H0 + 127) // 128
 
     # Determine SR frame size dynamically 
-    frameW_sr, frameH_sr = frames[index].size
+    #frameW_sr, frameH_sr = frames[index].size
+    # Determine SR frame size using the FIRST frame, opened safely
+    with Image.open(frames[index]) as tmp:
+        frameW_sr, frameH_sr = tmp.size
 
     # Full output dimensions
     outW = framesX * frameW_sr
@@ -168,7 +171,10 @@ def combineframes(frames, originalSize, index): # Uses the number of frames and 
             x = tx * frameW_sr
             y = ty * frameH_sr
 
-            out.paste(frames[index], (x, y))
+            #out.paste(frames[index], (x, y))
+            # Open the needed frame *only right here* and close immediately
+            with Image.open(frames[index]) as frame:
+                out.paste(frame, (x, y))
             index += 1
 
     print("[INFO] Superresolved image reconstructed") # Terminal update
@@ -283,14 +289,20 @@ def processDirectory(inputDir, PNGDir, framesDir, framesSRDir, srDir):
         print(f"[INFO] Saved superresolved: {savePath}")
         
         print("-" * 50)
+    print("Done processing, your images are ready for Re-ID")
 
 
 
 def loadFramesFromFolder(folder: Path):
+    frames = sorted(folder.glob("*_frame_*.png"))
+    print(f"[INFO] Found {len(frames)} SR frame paths")
+    """
     frames = []
     for f in sorted(folder.glob("*_frame_*.png")):
         frames.append(Image.open(f))
     print(f"[INFO] Loaded {len(frames)} SR frames")
+    return frames
+    """
     return frames
 
 
@@ -305,3 +317,4 @@ if __name__ == "__main__":
         framesSRDir=framesSRDir,
         srDir=SRDir
     )
+    
