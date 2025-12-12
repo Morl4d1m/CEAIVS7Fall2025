@@ -5,7 +5,7 @@ from pathlib import Path
 from PIL import Image, PngImagePlugin
 import concurrent.futures
 
-inputDir = Path(r"C:\Users\Christian Lykke\Documents\Skole\Aalborg Universitet\CEAIVS7\Project\SRImplementation\TSD-SR-main\imgs\IUSTPersonReID\query") # Remember to change this to your personal directory
+inputDir = Path(r"C:\Users\Christian Lykke\Documents\Skole\Aalborg Universitet\CEAIVS7\Project\SRImplementation\TSD-SR-main\imgs\DukeMTMC-reID\query") # Remember to change this to your personal directory
 PNGDir = inputDir / "pngsClaaudia" # Folder name for PNG versions of images
 framesDir = inputDir / "framesClaaudia" # Folder that holds subfolders with each 128x128 frame
 framesSRDir = inputDir / "framesSRClaaudia" # Contains subfolders with each 512x512 SR'ed frame
